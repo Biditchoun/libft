@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/21 22:13:26 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:55:42 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <string.h>
 #include <strings.h>
 #include <bsd/string.h>
+#include <ctype.h>
 
 int	main()
 {
@@ -850,6 +851,38 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8");
+	}
+	if (!check)
+		printf(GRN "OK\n");
+
+	//toupper
+	printf(RST "ft_toupper : ");
+	check = 0;
+	i = -1;
+	while (++i < 130)
+	{
+		if (toupper(i) != ft_toupper(i))
+		{
+			if (!check)
+				check = printf(RED "KO\n");
+			printf (RST "ft_toupper(%d) = %d, toupper(%d) = %d\n", i, ft_toupper(i), i, toupper(i));
+		}
+	}
+	if (!check)
+		printf(GRN "OK\n");
+
+	//tolower
+	printf(RST "ft_tolower : ");
+	check = 0;
+	i = -1;
+	while (++i < 130)
+	{
+		if (tolower(i) != ft_tolower(i))
+		{
+			if (!check)
+				check = printf(RED "KO\n");
+			printf (RST "ft_tolower(%d) = %d, tolower(%d) = %d\n", i, ft_tolower(i), i, tolower(i));
+		}
 	}
 	if (!check)
 		printf(GRN "OK\n");
