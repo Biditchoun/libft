@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:54:41 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/21 22:14:13 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/23 22:03:45 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*ps;
 	int		i;
 
+	if (!n)
+		return (dest);
 	pd = (char *)dest;
 	ps = (char *)src;
 	if (check_overlap(pd, ps, n))

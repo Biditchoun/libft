@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:48:24 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/19 19:56:03 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:55:19 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	char	*p;
 	int		i;
 
+	if (!n)
+		return (s);
 	p = (char *)s;
 	i = 0;
 	while (n-- > 0)

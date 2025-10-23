@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/23 21:27:44 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/23 22:31:26 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,26 @@ int	main()
 	//ft_bzero(llun, 5);
 	//ft_memcpy(m0, llun, 5);
 	//ft_memcpy(llun, m0,  5);
+	//ft_memcpy(llun, llun,  5);
 	//ft_memmove(llun, m0,  5);
 	//ft_memmove(m0, llun,  5);
+	//ft_memmove(llun, llun,  5);
 	//ft_strlcpy(llun, "oui", 5);
 	//ft_strlcpy(m0, llun, 5);
 	//ft_strlcpy(llun, llun, 5);
+	//ft_strlcpy(m0, llun, 0);
+	//ft_strlcpy(llun, llun, 0);
+	//ft_strlcat(llun, "oui", 5);
+	//ft_strlcat(m0, llun, 5);
+	//ft_strlcat(llun, llun, 5);
+	//ft_strlcat(m0, llun, 0);
+	//ft_strlcat(llun, llun, 0);
 	//llun = ft_strchr(llun, 0);
 	//llun = ft_strrchr(llun, 0);
+	//i = ft_strncmp(llun, "oui", 5);
+	//i = ft_strncmp("oui", llun, 5);
+	//i = ft_strncmp(llun, llun, 5);
+	//llun = ft_memchr(llun, 0, 1);
 
 	//isalpha
 	printf ("ft_isalpha : ");
@@ -202,6 +215,12 @@ int	main()
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : empty buffer[100], -5, 100\n");
 	}
+	if (ft_memset(llun, ' ', 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, ' ', 0\n", llun);
+	}
 	if (!check)
 		printf(GRN "OK\n");
 
@@ -269,6 +288,7 @@ int	main()
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : \"    \\n\", 0\n");
 	}
+	ft_bzero(llun, 0);
 	if (!check)
 		printf(GRN "OK\n");
 
@@ -330,6 +350,24 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : buffer[100] filled with ' ', \"\", 1\n");
+	}
+	if (memcpy(llun, " ", 0) != ft_memcpy(llun, " ", 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, " ", 0\n", llun);
+	}
+	if (memcpy(" ", llun, 0) != ft_memcpy(" ", llun, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : " ", %s, 0\n", llun);
+	}
+	if (memcpy(llun, llun, 0) != ft_memcpy(llun, llun, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, %s, 0\n", llun, llun);
 	}
 	//Overlap behaviour tests
 	s0 = (char *)m0;
@@ -461,6 +499,24 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : char *s = %s: s, s, 8\n", llun);
+	}
+	if (memmove(llun, " ", 0) != ft_memmove(llun, " ", 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, " ", 0\n", llun);
+	}
+	if (memmove(" ", llun, 0) != ft_memmove(" ", llun, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : " ", %s, 0\n", llun);
+	}
+	if (memmove(llun, llun, 0) != ft_memmove(llun, llun, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, %s, 0\n", llun, llun);
 	}
 	if (!check)
 		printf(GRN "OK\n");
@@ -658,6 +714,12 @@ int	main()
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8");
 	}
+	if (strlcpy(llun, "oui", 0) != ft_strlcpy(llun, "oui", 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, \"oui\", 0", llun);
+	}
 	if (!check)
 		printf(GRN "OK\n");
 
@@ -853,6 +915,12 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8");
+	}
+	if (strlcat(llun, "oui", 0) != ft_strlcat(llun, "oui", 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf(RST "Sent parameters : %s, \"oui\", 0", llun);
 	}
 	if (!check)
 		printf(GRN "OK\n");
@@ -1456,6 +1524,27 @@ int	main()
 			check = printf(RED "KO\n");
 		printf (RST "Sent parameters : strings with \\x12 and other chars like that in it\n");
 	}
+	strcpy(s0, "oui");
+	strcpy(s1, "oui");
+	i = 0;
+	if ((strncmp(llun, s1, i) < 0 && ft_strncmp(llun, s1, i) >= 0) || (!strncmp(llun, s1, i) && ft_strncmp(llun, s1, i)) || (strncmp(llun, s1, i) > 0 && ft_strncmp(llun, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	if ((strncmp(s0, llun, i) < 0 && ft_strncmp(s0, llun, i) >= 0) || (!strncmp(s0, llun, i) && ft_strncmp(s0, llun, i)) || (strncmp(s0, llun, i) > 0 && ft_strncmp(s0, llun, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	if ((strncmp(llun, llun, i) < 0 && ft_strncmp(llun, llun, i) >= 0) || (!strncmp(llun, llun, i) && ft_strncmp(llun, llun, i)) || (strncmp(llun, llun, i) > 0 && ft_strncmp(llun, llun, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
 	if (!check)
 		printf(GRN "OK\n");
 
@@ -1519,6 +1608,12 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf (RST "Sent parameters : \"%s\", 'J', 10\n", s0);
+	}
+	if (memchr(llun, 0, 0) != ft_memchr(llun, 0, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 0, 0\n", llun);
 	}
 	if (!check)
 		printf(GRN "OK\n");
