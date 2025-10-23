@@ -1,0 +1,9 @@
+All the libc functions crash when passing a NULL pointer to them.
+That means it is needed to NOT protect those functions.
+
+memcpy : I have added some tests to try out its overlapping behaviour ; however the man specifically states src and dest shouldn't.
+Also, passing two identical pointers throws a compiling error, so I consider this as being undefined behaviour.
+
+strlcpy & strlcat : The man I have on the terminal does not specifically say what should happen is src and dest overlap.
+However, I found several other versions of the man online that indicate that both have undefined behaviour when there is an overlap.
+As such, I decided to do the same, and to not test overlap for both of those functions.

@@ -6,12 +6,12 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/22 19:55:42 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/23 16:02:16 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define GRN   "\x1B[32m"
-#define RED   "\x1B[31m"
+#define GRN "\x1B[32m"
+#define RED "\x1B[31m"
 #define RST "\x1B[0m"
 #include "libft.h"
 #include <stdio.h>
@@ -39,6 +39,8 @@ int	main()
 	//ft_strlcpy(llun, "oui", 5);
 	//ft_strlcpy(m0, llun, 5);
 	//ft_strlcpy(llun, llun, 5);
+	//llun = ft_strchr(llun, 0);
+	//llun = ft_strrchr(llun, 0);
 
 	//isalpha
 	printf ("ft_isalpha : ");
@@ -259,7 +261,7 @@ int	main()
 	}
 	strcpy(m0, "    \n");
 	strcpy(m1, "    \n");
-	bzero(m0, 0);
+	bzero(m0, (0));
 	ft_bzero(m1, 0);
 	if (memcmp(m0, m1, 100))
 	{
@@ -883,6 +885,358 @@ int	main()
 				check = printf(RED "KO\n");
 			printf (RST "ft_tolower(%d) = %d, tolower(%d) = %d\n", i, ft_tolower(i), i, tolower(i));
 		}
+	}
+	if (!check)
+		printf(GRN "OK\n");
+
+	//strchr
+	printf(RST "ft_strchr : ");
+	check = 0;
+	strcpy(s0, "Jambonfromagequiroule");
+	s0[0] = 0;
+	if (strchr(s0, 'a') != ft_strchr(s0, 'a'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\", 'a'\n");
+	}
+	if (strchr(s0, 0) != ft_strchr(s0, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\", 0\n");
+	}
+	s0[0] = 'J';
+	s0[3] = 0;
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'J'\n");
+	}
+	if (strchr(s0, 'a') != ft_strchr(s0, 'a'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'a'\n");
+	}
+	if (strchr(s0, 'm') != ft_strchr(s0, 'm'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'm'\n");
+	}
+	if (strchr(s0, 0) != ft_strchr(s0, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 0\n");
+	}
+	if (strchr(s0, 'o') != ft_strchr(s0, 'o'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'o'\n");
+	}
+	s0[3] = 'b';
+	if (strchr(s0, 'm') != ft_strchr(s0, 'm'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jambonfromagequiroule\", 'm'\n");
+	}
+	if (strchr(s0, 'o') != ft_strchr(s0, 'o'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jambonfromagequiroule\", 'o'\n");
+	}
+	if (strchr(s0, 'o' + 256) != ft_strchr(s0, 'o' + 256))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jambonfromagequiroule\", 'o' + 256\n");
+	}
+	strcpy(s0, "JJambonfromagequiroule");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfroJmagequiroule");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromagequirouleJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfroJJmagequiroule");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfroJmJagequiroule");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfroJmagequirouleJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfromagequirouleJJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromaJgequirouleJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJgequirouleJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromaJJgequirouleJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromaJgequirouleiJJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'j'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJJgequirouleiJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJgequirouleiJJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJJgequirouleiJJ");
+	if (strchr(s0, 'J') != ft_strchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+	if (strchr(s0, 'E') != ft_strchr(s0, 'E'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'E'\n", s0);
+	}
+	if (!check)
+		printf(GRN "OK\n");
+
+	//strrchr
+	printf(RST "ft_strrchr : ");
+	check = 0;
+	strcpy(s0, "Jambonfromagequiroule");
+	s0[0] = 0;
+	if (strrchr(s0, 'a') != ft_strrchr(s0, 'a'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\", 'a'\n");
+	}
+	if (strrchr(s0, 0) != ft_strrchr(s0, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\", 0\n");
+	}
+	s0[0] = 'J';
+	s0[3] = 0;
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'J'\n");
+	}
+	if (strrchr(s0, 'a') != ft_strrchr(s0, 'a'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'a'\n");
+	}
+	if (strrchr(s0, 'm') != ft_strrchr(s0, 'm'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'm'\n");
+	}
+	if (strrchr(s0, 0) != ft_strrchr(s0, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 0\n");
+	}
+	if (strrchr(s0, 'o') != ft_strrchr(s0, 'o'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jam\", 'o'\n");
+	}
+	s0[3] = 'b';
+	if (strrchr(s0, 'm') != ft_strrchr(s0, 'm'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jambonfromagequiroule\", 'm'\n");
+	}
+	if (strrchr(s0, 'o') != ft_strrchr(s0, 'o'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jambonfromagequiroule\", 'o'\n");
+	}
+	if (strrchr(s0, 'o' + 256) != ft_strrchr(s0, 'o' + 256))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"Jambonfromagequiroule\", 'o' + 256\n");
+	}
+	strcpy(s0, "JJambonfromagequiroule");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfroJmagequiroule");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromagequirouleJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfroJJmagequiroule");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfroJmJagequiroule");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfroJmagequirouleJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "ambonfromagequirouleJJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromaJgequirouleJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJgequirouleJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromaJJgequirouleJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JambonfromaJgequirouleiJJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'j'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJJgequirouleiJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJgequirouleiJJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "JJambonfromaJJgequirouleiJJ");
+	if (strrchr(s0, 'J') != ft_strrchr(s0, 'J'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J'\n", s0);
+	}
+	strcpy(s0, "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+	if (strrchr(s0, 'E') != ft_strrchr(s0, 'E'))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'E'\n", s0);
 	}
 	if (!check)
 		printf(GRN "OK\n");
