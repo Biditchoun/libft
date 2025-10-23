@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/23 16:02:16 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/23 17:22:40 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1237,6 +1237,224 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf (RST "Sent parameters : \"%s\", 'E'\n", s0);
+	}
+	if (!check)
+		printf(GRN "OK\n");
+
+	//strncmp
+	printf(RST "ft_strncmp : ");
+	check = 0;
+	s0[0] = s1[0] = 0;
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 1;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 2;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s0, "");
+	strcpy(s1, "J");
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 1;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s0, "t");
+	strcpy(s1, "");
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 1;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s0, "J");
+	strcpy(s1, "J");
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 1;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 2;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 3;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s0, "Jambonnf");
+	strcpy(s1, "Jambonnn");
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 6;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 7;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s1, "Jambonnf");
+	strcpy(s0, "Jambonnn");
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 6;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 7;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s0, "Jambonnf");
+	strcpy(s1, "Jambonnn");
+	s0[6] = s1[6] = 0;
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 6;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 7;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	strcpy(s1, "Jambonnf");
+	strcpy(s0, "Jambonnn");
+	s0[6] = s1[6] = 0;
+	i = 0;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 6;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	i = 7;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\", %i\n", s0, s1, i);
+	}
+	bzero(s0, 100);
+	bzero(s1, 100);
+	strcpy(s0, "\x12\xfe\x65\x12\xbd\xde\xad");
+	strcpy(s1, "\x12\x04");
+	i = 1;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : strings with \\x12 and other chars like that in it\n");
+	}
+	i = 2;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : strings with \\x12 and other chars like that in it\n");
+	}
+	strcpy(s1, "\x12\xfe\x65\x12\xbd\xde\xad");
+	strcpy(s0, "\x12\x04");
+	i = 1;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : strings with \\x12 and other chars like that in it\n");
+	}
+	i = 2;
+	if ((strncmp(s0, s1, i) < 0 && ft_strncmp(s0, s1, i) >= 0) || (!strncmp(s0, s1, i) && ft_strncmp(s0, s1, i)) || (strncmp(s0, s1, i) > 0 && ft_strncmp(s0, s1, i) <= 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : strings with \\x12 and other chars like that in it\n");
 	}
 	if (!check)
 		printf(GRN "OK\n");
