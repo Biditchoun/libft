@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/23 17:22:40 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:27:44 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <string.h>
 #include <strings.h>
 #include <bsd/string.h>
-#include <ctype.h>
+#include <stdlib.h>
 
 int	main()
 {
@@ -1458,4 +1458,72 @@ int	main()
 	}
 	if (!check)
 		printf(GRN "OK\n");
+
+	//memchr
+	printf(RST "ft_memchr : ");
+	check = 0;
+	strcpy(s0, "Jambonfromagequiroule");
+	m0[0] = 0;
+	if (memchr(m0, 'a', 0) != ft_memchr(m0, 'a', 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\\0ambonfromagequiroule\", 'a', 0\n");
+	}
+	if (memchr(m0, 'a', 1) != ft_memchr(m0, 'a', 1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\\0ambonfromagequiroule\", 'a', 1\n");
+	}
+	if (memchr(m0, 'a', 2) != ft_memchr(m0, 'a', 2))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\\0ambonfromagequiroule\", 'a', 2\n");
+	}
+	if (memchr(m0, 0, 0) != ft_memchr(m0, 0, 0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\\0ambonfromagequiroule\", 0, 0\n");
+	}
+	if (memchr(m0, 0, 1) != ft_memchr(m0, 0, 1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"\\0ambonfromagequiroule\", 0, 1\n");
+	}
+	strcpy(s0, "JJambonfromagequiroule");
+	if (memchr(m0, 'J', 1) != ft_memchr(m0, 'J', 1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J', 1\n", s0);
+	}
+	if (memchr(m0, 'J', 2) != ft_memchr(m0, 'J', 2))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J', 2\n", s0);
+	}
+	strcpy(s0, "JambonfroJmagequiroule");
+	if (memchr(m0, 'J', 9) != ft_memchr(m0, 'J', 9))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J', 9\n", s0);
+	}
+	if (memchr(m0, 'J', 10) != ft_memchr(m0, 'J', 10))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", 'J', 10\n", s0);
+	}
+	if (!check)
+		printf(GRN "OK\n");
+
+	//memcmp
+	printf(RST "ft_memcmp : ");
+	check = 0;
 }
