@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:03:44 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/23 15:32:30 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:36:13 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 		return (NULL);
 	return ((char *)&s[rt]);
 }
-
