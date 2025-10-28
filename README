@@ -7,3 +7,14 @@ Also, passing two identical pointers throws a compiling error, so I consider thi
 strlcpy & strlcat : The man I have on the terminal does not specifically say what should happen is src and dest overlap.
 However, I found several other versions of the man online that indicate that both have undefined behaviour when there is an overlap.
 As such, I decided to do the same, and to not test overlap for both of those functions.
+
+atoi : Some may say handling overflows should be undefined behaviour. The man we have here is not clear on this subject.
+As such, I included tests so one may to control their handle on that compared to the real function.
+
+calloc : The man says calloc throws an error if nmemb * size is greater than an integrer.
+However, that is NOT how the function behaves (at least, here, on this system).
+I do not know if this calloc behaviour is universal, but I wrote the tests on this function with what I could observe here.
+
+Additional functions : In the subject, it is each time written that NULL should be sent back only if the allocation failed.
+As such, for every case where we should not send anything back (e.g. substr with start after the end of the string or with len == 0),
+I consider we should send back an empy string.

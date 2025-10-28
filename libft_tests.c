@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/27 23:28:56 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:19:23 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int	main()
 	//llun = ft_strnstr(m0, llun, 0);
 	//llun = ft_strnstr(llun, m0, 5);
 	//llun = ft_strnstr(llun, llun, 0);
+	//m0 = ft_strdup(llun);
 
 	//isalpha
 	printf ("ft_isalpha : ");
@@ -2592,4 +2593,695 @@ int	main()
 	free (p1);
 	if (!check)
 		printf(GRN "OK\n");
+
+	//strdup
+	printf(RST "ft_strdup : ");
+	check = 0;
+	strcpy(m0, "");
+	s0 = strdup(m0);
+	s1 = ft_strdup(m0);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\"\n", m0);
+	}
+	free (s0);
+	free (s1);
+	strcpy(m0, "PAF");
+	s0 = strdup(m0);
+	s1 = ft_strdup(m0);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\"\n", m0);
+	}
+	free (s0);
+	free (s1);
+	strcpy(m0, "e");
+	s0 = strdup(m0);
+	s1 = ft_strdup(m0);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\"\n", m0);
+	}
+	free (s0);
+	free (s1);
+	strcpy(m0, "Jambonfromagequiroule\npour\nde\nVRAI");
+	s0 = strdup(m0);
+	s1 = ft_strdup(m0);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\"\n", m0);
+	}
+	free (s0);
+	free (s1);
+	if (!check)
+		printf(GRN "OK\n");
+
+	//substr
+	printf(RST "ft_substr : ");
+	check = 0;
+	strcpy(m0, "");
+	i = 0;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -6;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 0;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 0;
+	j = -6;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -6;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = -6;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -6;
+	j = -6;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m0))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m0, "a");
+	strcpy(m1, "");
+	i = 0;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -2;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = 3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = -3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "a");
+	i = 0;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 0;
+	j = 2;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 0;
+	j = -2;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m0, "Jambonfromagequiroule");
+	strcpy(m1, "");
+	i = 0;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 1;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 22;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 25;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -25;
+	j = 0;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "J");
+	i = 0;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "Jam");
+	i = 0;
+	j = 3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "Jambonfromagequiroule");
+	i = 0;
+	j = 21;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "Jambonfromagequiroule");
+	i = 0;
+	j = 22;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "Jambonfromagequiroule");
+	i = 0;
+	j = -22;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "a");
+	i = 1;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "amb");
+	i = 1;
+	j = 3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "ambonfromagequiroule");
+	i = 1;
+	j = 20;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "ambonfromagequiroule");
+	i = 1;
+	j = 21;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "ambonfromagequiroule");
+	i = 1;
+	j = -22;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "n");
+	i = 5;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "nfr");
+	i = 5;
+	j = 3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "nfromagequiroule");
+	i = 5;
+	j = 16;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "nfromagequiroule");
+	i = 5;
+	j = 21;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "nfromagequiroule");
+	i = 5;
+	j = -22;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "");
+	i = 21;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 21;
+	j = 3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 21;
+	j = 16;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 21;
+	j = 21;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = 21;
+	j = -22;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	strcpy(m1, "");
+	i = -21;
+	j = 1;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -21;
+	j = 3;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -21;
+	j = 16;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -21;
+	j = 21;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	i = -21;
+	j = -22;
+	s0 = ft_substr(m0, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	s0 = ft_substr(llun, i, j);
+	if (strcmp(s0, m1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameter : \"%s\", %i, %i\n", m0, i, j);
+	}
+	free (s0);
+	if (!check)
+		printf(GRN "OK\n");
+
+	//strjoin
+	printf(RST "ft_strjoin : ");
+	check = 0;
+	strcpy(m0, "");
+	strcpy(m1, "");
+	strcpy(s1, "");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strjoin(llun, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strjoin(m0, llun);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strjoin(llun, llun);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "feur");
+	strcpy(m1, "");
+	strcpy(s1, "feur");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strjoin(m0, llun);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "");
+	strcpy(m1, "feur");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strjoin(llun, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "a");
+	strcpy(m1, "b");
+	strcpy(s1, "ab");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "J");
+	strcpy(m1, "ambonfromagequiroule");
+	strcpy(s1, "Jambonfromagequiroule");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "Jambonfromagequiroul");
+	strcpy(m1, "e");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "Jambonfromage");
+	strcpy(m1, "quiroule");
+	s0 = ft_strjoin(m0, m1);
+	if (strcmp(s0, s1))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	if (!check)
+		printf(GRN "OK\n");
+
+	//strtrim
+	printf(RST "ft_strtrim : ");
+	check = 0;
 }
