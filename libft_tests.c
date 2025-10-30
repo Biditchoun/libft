@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/30 17:32:24 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/30 19:59:54 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -394,7 +394,7 @@ int	main()
 	memset(m1, ' ', 100);
 	strcpy(s0, "Jambonfromagequiroule");
 	strcpy(s1, "Jambonfromagequiroule");
-	if (memcmp(memcpy(&s0[5], m0, 8), ft_memcpy(&s1[5], m1, 8), 100))
+	if (memcmp(memcpy(&s0[5], m0, 8), ft_memcpy(&s1[5], m1, 8), 95))
 	{
 		if (!check)
 			check = printf(RED "KO\n");
@@ -486,7 +486,7 @@ int	main()
 	memset(m1, ' ', 100);
 	strcpy(s0, "Jambonfromagequiroule");
 	strcpy(s1, "Jambonfromagequiroule");
-	if (memcmp(memmove(&s0[5], m0, 8), ft_memmove(&s1[5], m1, 8), 100))
+	if (memcmp(memmove(&s0[5], m0, 8), ft_memmove(&s1[5], m1, 8), 95))
 	{
 		if (!check)
 			check = printf(RED "KO\n");
@@ -2395,7 +2395,6 @@ int	main()
 		printf(GRN "OK\n");
 
 	//calloc
-	printf(RST "Calloc tests take a bit of time, just wait for around 15 seconds\n");
 	printf(RST "ft_calloc : ");
 	check = 0;
 	void	*p0, *p1;
@@ -2593,7 +2592,8 @@ int	main()
 	free (p0);
 	free (p1);
 	if (!check)
-		printf(GRN "OK\n");
+		printf(GRN "OK*\n");
+	printf(RST "Some heavier testing for calloc is only commented. If you're short on RAM, that testing may crash you.\nHowever, I had no issue on my 42 session. You may uncomment those tests from line ~2540 on.\n");
 
 	//strdup
 	printf(RST "ft_strdup : ");
@@ -3420,7 +3420,59 @@ int	main()
 	if (!check)
 		printf(GRN "OK\n");
 
-	//strtrim
+	//split
 	printf(RST "ft_split : ");
 	check = 0;
+	void ffree(void **str);
+	int sstrcmp(char **s1, char **s2);
+	char **t1, **t2;
+	t1 = malloc(sizeof(char *));
+	t1[0] = NULL;
+	t2 = ft_split(llun, 0);
+	if (sstrcmp(t1, t2))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", %i\n", llun, 0);
+	}
+	ffree((void **)t2);
+	i = 0;
+	strcpy(m0, "");
+	t2 = ft_split(m0, i);
+	if (sstrcmp(t1, t2))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", %i\n", m0, i);
+	}
+	ffree((void **)t2);
+	if (!check)
+		printf(GRN "OK\n");
+
+	//itoa
+	printf(RST "ft_itoa : ");
+	check = 0;
+}
+
+void	ffree(void **p)
+{
+	int	i;
+
+	i = 0;
+	while (p[i])
+		free(p[i]);
+	free(p);
+}
+
+int	sstrcmp(char **s1, char **s2)
+{
+	int	i;
+
+	i = -1;
+	while (s1[++i] && s2[i])
+		if (strcmp(s1[i], s2[i]))
+			return (1);
+	if (s1[i] || s2[i])
+		return (1);
+	return (0);
 }
