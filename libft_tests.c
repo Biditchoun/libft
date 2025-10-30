@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/30 15:39:25 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:56:19 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -534,7 +534,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 0");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -544,7 +544,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 1");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -554,7 +554,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 3");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 3\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -564,7 +564,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 4");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 4\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -574,7 +574,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 5");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 5\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -584,7 +584,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 0");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -594,7 +594,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 1");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -604,7 +604,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 3");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 3\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -615,7 +615,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 0");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -626,7 +626,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 1");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -637,7 +637,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 4");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 4\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -648,7 +648,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 5");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 5\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -659,7 +659,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 8");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 8\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -670,7 +670,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 0");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -681,7 +681,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 1");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -692,7 +692,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 4");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 4\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -703,7 +703,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 5");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 5\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -714,13 +714,13 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8\n");
 	}
 	if (strlcpy(llun, "oui", 0) != ft_strlcpy(llun, "oui", 0))
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : %s, \"oui\", 0", llun);
+		printf(RST "Sent parameters : %s, \"oui\", 0\n", llun);
 	}
 	if (!check)
 		printf(GRN "OK\n");
@@ -736,7 +736,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 0");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -746,7 +746,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 1");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -756,7 +756,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 3");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 3\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -766,7 +766,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 4");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 4\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -776,7 +776,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 5");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"oui\", 5\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -786,7 +786,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 0");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -796,7 +796,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 1");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -806,7 +806,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 3");
+		printf(RST "Sent parameters : char *s = \"Jambonfromagequiroule VRAIMENT TOUJOURS\": s, \"\", 3\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -817,7 +817,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 0");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -828,7 +828,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 1");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -839,7 +839,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 4");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 4\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -850,7 +850,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 5");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 5\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -861,7 +861,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 8");
+		printf(RST "Sent parameters : char *s = \"J\": s, \"feur\", 8\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -872,7 +872,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 0");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 0\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -883,7 +883,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 1");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 1\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -894,7 +894,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 4");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 4\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -905,7 +905,7 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 5");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 5\n");
 	}
 	memset(m0, ' ', 100);
 	memset(m1, ' ', 100);
@@ -916,13 +916,13 @@ int	main()
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8");
+		printf(RST "Sent parameters : char *s = \"\": s, \"feur\", 8\n");
 	}
 	if (strlcat(llun, "oui", 0) != ft_strlcat(llun, "oui", 0))
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf(RST "Sent parameters : %s, \"oui\", 0", llun);
+		printf(RST "Sent parameters : %s, \"oui\", 0\n", llun);
 	}
 	if (!check)
 		printf(GRN "OK\n");
