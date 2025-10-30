@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/28 19:19:23 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:39:25 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <strings.h>
 #include <bsd/string.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int	main()
 {
