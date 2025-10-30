@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:41:43 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/28 17:50:17 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/30 17:25:54 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*rt;
-	int	l1;
-	int	l2;
+	int		l1;
+	int		l2;
 
 	if (!s1 && !s2)
 		return (ft_strdup(""));

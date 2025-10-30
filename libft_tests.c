@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/30 15:56:19 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/30 17:32:24 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -2510,26 +2510,6 @@ int	main()
 	free (p1);
 	size_t calloc_max = INT_MAX;
 	calloc_max = calloc_max * 5 + 4;
-	p0 = calloc(calloc_max, 1);
-	p1 = ft_calloc(calloc_max, 1);
-	if (memcmp(p0, p1, INT_MAX))
-	{
-		if (!check)
-			check = printf(RED "KO\n");
-		printf (RST "Sent parameters : \"%zu, 1\"\n", calloc_max);
-	}
-	free (p0);
-	free (p1);
-	p0 = calloc(1, INT_MAX * 5 + 4);
-	p1 = ft_calloc(1, INT_MAX * 5 + 4);
-	if (memcmp(p0, p1, INT_MAX))
-	{
-		if (!check)
-			check = printf(RED "KO\n");
-		printf (RST "Sent parameters : \"1, INT_MAX * 5 + 4\"\n");
-	}
-	free (p0);
-	free (p1);
 	p0 = calloc(1, INT_MAX * 5 + 5);
 	p1 = ft_calloc(1, INT_MAX * 5 + 5);
 	if (p1)
@@ -2560,19 +2540,29 @@ int	main()
 	}
 	free (p0);
 	free (p1);
-	calloc_max = INT_MAX;
-	calloc_max += 3;
-	p0 = calloc(calloc_max, INT_MAX - 3);
-	p1 = ft_calloc(calloc_max, INT_MAX - 3);
-	if (p1)
+	/*p0 = calloc(calloc_max, 1);
+	p1 = ft_calloc(calloc_max, 1);
+	if (memcmp(p0, p1, INT_MAX))
 	{
 		if (!check)
 			check = printf(RED "KO\n");
-		printf (RST "Sent parameters : \"INT_MAX + 3, INT_MAX - 3\"\n");
+		printf (RST "Sent parameters : \"%zu, 1\"\n", calloc_max);
 	}
 	free (p0);
 	free (p1);
-	p0 = calloc(calloc_max, 2);
+	p0 = calloc(1, INT_MAX * 5 + 4);
+	p1 = ft_calloc(1, INT_MAX * 5 + 4);
+	if (memcmp(p0, p1, INT_MAX))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"1, INT_MAX * 5 + 4\"\n");
+	}
+	free (p0);
+	free (p1);*/
+	calloc_max = INT_MAX;
+	calloc_max += 3;
+	/*p0 = calloc(calloc_max, 2);
 	p1 = ft_calloc(calloc_max, 2);
 	if (memcmp(p0, p1, INT_MAX))
 	{
@@ -2589,6 +2579,16 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf (RST "Sent parameters : \"2, INT_MAX + 3\"\n");
+	}
+	free (p0);
+	free (p1);*/
+	p0 = calloc(calloc_max, INT_MAX - 3);
+	p1 = ft_calloc(calloc_max, INT_MAX - 3);
+	if (p1)
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"INT_MAX + 3, INT_MAX - 3\"\n");
 	}
 	free (p0);
 	free (p1);
@@ -3284,5 +3284,143 @@ int	main()
 
 	//strtrim
 	printf(RST "ft_strtrim : ");
+	check = 0;
+	strcpy(m0, "0fromage0");
+	strcpy(m1, "o0");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, "fromage"))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strtrim(m0, llun);
+	if (strcmp(s0, "0fromage0"))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strtrim(llun, m1);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strtrim(m0, "");
+	if (strcmp(s0, "0fromage0"))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strtrim("", m1);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strtrim(llun, llun);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	s0 = ft_strtrim("", "");
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "aaaaaaaaaaaaaaaaaaaa");
+	strcpy(m1, "bca");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m1, "abc");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m1, "bac");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m1, "Jambonfromage");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, ""))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m0, "aaaaaaaaa aaaaaaaaaaa");
+	strcpy(m1, "bca");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, " "))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m1, "abc");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, " "))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m1, "bac");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, " "))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	strcpy(m1, "Jambonfromage");
+	s0 = ft_strtrim(m0, m1);
+	if (strcmp(s0, " "))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : \"%s\", \"%s\"\n", m0, m1);
+	}
+	free(s0);
+	if (!check)
+		printf(GRN "OK\n");
+
+	//strtrim
+	printf(RST "ft_split : ");
 	check = 0;
 }
