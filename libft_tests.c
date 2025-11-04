@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:42:07 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/30 19:59:54 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/11/04 20:12:39 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1616,6 +1616,13 @@ int	main()
 		if (!check)
 			check = printf(RED "KO\n");
 		printf (RST "Sent parameters : \"%s\", 0, 0\n", llun);
+	}
+	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+	if (memchr(tab, -1, 7) != ft_memchr(tab, -1, 7))
+	{
+		if (!check)
+			check = printf(RED "KO\n");
+		printf (RST "Sent parameters : {-49, 49, 1, -1, 0, -2, 2}, -1, 7\n");
 	}
 	if (!check)
 		printf(GRN "OK\n");

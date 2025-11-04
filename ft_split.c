@@ -6,13 +6,13 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:55:23 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/10/30 19:20:19 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/10/30 20:04:05 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**llun_str()
+static char	**llun_str(void)
 {
 	char	**rt;
 
